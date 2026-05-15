@@ -1,0 +1,145 @@
+%%%%%%%%%%%%%%%
+% Fichier de configuration du CV
+% Version compacte 1 page, optimisée ATS
+% Basé sur le template original de LianTze Lim
+%%%%%%%%%%%%%%%
+
+\RequirePackage{silence}
+\WarningsOff[longtable]
+\WarningsOff[array]
+
+\usepackage{ifxetex,ifluatex}
+\newif\ifxetexorluatex
+\ifxetex
+  \xetexorluatextrue
+\else
+  \ifluatex
+    \xetexorluatextrue
+  \else
+    \xetexorluatexfalse
+  \fi
+\fi
+
+\RequirePackage{graphicx}
+\RequirePackage[hyphens]{url}
+\RequirePackage[french]{babel}
+\raggedright
+
+\RequirePackage[fixed]{fontawesome5}
+\RequirePackage{simpleicons}
+\RequirePackage{tabularx}
+
+\newcommand{\smallcaps}[1]{\textsc{\lowercase{#1}}}
+
+% Marges réduites pour tenir sur 1 page
+\RequirePackage[a4paper,nohead,nofoot,hmargin=1.6cm,vmargin=1.2cm]{geometry}
+\RequirePackage{relsize}
+\RequirePackage[dvipsnames,svgnames]{xcolor}
+\RequirePackage{tikz}
+\usetikzlibrary{shapes,shadows}
+
+\RequirePackage{comment}
+
+% Palette professionnelle bleue (lisible par ATS)
+\definecolor{SwishLineColour}{HTML}{1F4E79}
+\definecolor{MarkerColour}{HTML}{1F4E79}
+
+\RequirePackage{biblatex}
+\RequirePackage{csquotes}
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+   \node[shape=circle,text=white,fill=MarkerColour!80!black,font=\sffamily\scriptsize\bfseries,inner sep=1pt,text height=1.35ex,minimum width=1.5em,text centered] (char) {#1};}}
+
+\newcounter{bibitem}
+\AtBeginBibliography{\setcounter{bibitem}{1}}
+\iffieldformatundef{labelnumberwidth}{%
+  \AtEveryBibitem{\makebox[2.5em][l]{\circled{\thebibitem}\stepcounter{bibitem}}}%
+}{%
+  \DeclareFieldFormat{labelnumberwidth}{\makebox[2.5em][l]{\circled{\thebibitem}}}%
+  \setlength{\biblabelsep}{0pt}%
+  \AtEveryBibitem{\stepcounter{bibitem}}%
+}
+\AtEveryBibitem{\iffieldundef{doi}{}{\clearfield{url}}}
+
+\setlength{\bibitemsep}{1ex}
+\setlength{\bibhang}{2.5em}
+\RequirePackage{xpatch}
+\xpretofieldformat{doi}
+  {\textcolor{MarkerColour!80!black}{\scriptsize\faLink}}
+  {}{}
+\xpretofieldformat{url}
+  {\textcolor{MarkerColour!80!black}{\scriptsize\faLink}}
+  {}{}
+
+% Espacements compactés pour 1 page
+\headerscale{0.95}
+\rubricfont{\large\bfseries\sffamily}
+\setlength{\rubricspace}{-2pt}
+\setlength{\rubricafterspace}{-4pt}
+\setlength{\subrubricspace}{-2pt}
+\setlength{\subrubricbeforespace}{-2pt}
+\def\@@rubrichead#1{%
+  \begin{tikzpicture}[baseline]%
+  \shade[left color=SwishLineColour!60!white, right color=white] rectangle (\@almosttextwidth,2pt);
+  \node[font={\@rubricfont},inner sep=0pt,text ragged,anchor=south west,text depth=.4ex,text height=1.4ex] at (1pt,2pt) {#1};
+  \end{tikzpicture}%
+  \vspace\rubricspace%
+}
+
+\subrubricfont{\normalsize\bfseries\sffamily}
+\subrubricalignment{l}
+
+\newcommand{\makefield}[2]{\makebox[1.3em]{\color{MarkerColour!80!black}#1} #2\hspace{1em}}
+
+\keyalignment{r}
+\rubricalignment{l}
+\renewcommand{\arraystretch}{1.1}
+\urlstyle{tt}
+
+% Réduire l'espacement entre paragraphes (bullets) dans les entries
+\setlength{\parskip}{0pt}
+
+\newcommand{\prefixmarker}[1]{\def\@prefixmarker{#1}}
+\def\@prefixmarker{\relscale{.9}\faBookmark}
+
+\prefix{%
+  \hspace*{-1ex}
+  \color{MarkerColour!80!black}\@prefixmarker%
+  \hspace*{1ex}%
+}
+
+\newcommand{\makerubrichead}[1]{\vskip\baselineskip\@@rubrichead{#1}}
+
+\defbibheading{subbibliography}{\vskip\subrubricbeforespace{\@subrubricfont\hspace{3pt}#1}\par}
+
+\defbibfilter{booksandchapters}{%
+( type=book or type=incollection )
+}
+
+\RequirePackage{pgffor}
+\newcommand{\mynames}[1]{\def\my@namelist{#1}}
+\newtoggle{boldname}
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \global\togglefalse{boldname}%
+  \foreach \my@fname / \my@gname in \my@namelist {%
+    \ifboolexpr{ test {\ifdefstrequal{\namepartfamily}{\my@fname}}
+                 and
+                 test {\ifdefstrequal{\namepartgiven}{\my@gname}}}
+      {\global\toggletrue{boldname}}{}%
+  }%
+  \iftoggle{boldname}{\textbf{#1}}{#1}%
+}
+
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \global\togglefalse{boldname}%
+  \foreach \my@fname / \my@gname in \my@namelist{%
+    \ifboolexpr{ test {\ifdefstrequal{\namepartfamily}{\my@fname}}
+                 and
+                 test {\ifdefstrequal{\namepartgiven}{\my@gname}}}
+      {\global\toggletrue{boldname}\breakforeach}{}%
+  }%
+  \iftoggle{boldname}{\textbf{#1}}{#1}%
+}
+
+
+\RequirePackage[colorlinks=true,allcolors=black,breaklinks=true]{hyperref}
