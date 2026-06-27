@@ -1,4 +1,4 @@
-\documentclass[a4paper,skipsamekey,10pt,french]{curve}
+\documentclass[a4paper,skipsamekey,9pt,french]{curve}
 
 \PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
 \usepackage{settings}
@@ -24,22 +24,22 @@
 
 \includecomment{fullonly}
 
+% Supprime le marqueur bookmark (symbole spécial) devant les entries
+\prefixmarker{}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% En-tête ATS — texte simple, pas de photo
+% En-tête ATS — texte simple, sans icônes ni symboles spéciaux
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \leftheader{%
-  {\LARGE\bfseries\sffamily Ahmed Bassoul}\\[1pt]
-  \textbf{Data Scientist \& Ingénieur Machine Learning}
+{\LARGE\bfseries\sffamily Ahmed Bassoul}\\[2pt]
+\textbf{Data Scientist \& Machine Learning Engineer}
 
   \vspace{0.15cm}
 
-  \makefield{\faPhone}{+212 770 805 909}
-  \makefield{\faEnvelope[regular]}{\href{mailto:bassoulahmed@gmail.com}{\texttt{bassoulahmed@gmail.com}}} \\
-  \makefield{\faLinkedin}{\href{https://www.linkedin.com/in/ahmed-bassoul/}{\texttt{linkedin.com/in/ahmed-bassoul}}}
-  \makefield{\faGithub}{\href{https://github.com/AhmedBassoul1}{\texttt{github.com/AhmedBassoul1}}} \\
-  \makefield{\faGlobe}{\href{https://ahmedbassoul1.github.io/my-portfolio/}{\texttt{ahmedbassoul1.github.io/my-portfolio}}}
-  \makefield{\faMapMarker}{Fès, Maroc}
+  Téléphone : +212 770 805 909 \quad Email : \href{mailto:bassoulahmed@gmail.com}{\texttt{bassoulahmed@gmail.com}} \\
+  LinkedIn : \href{https://www.linkedin.com/in/ahmed-bassoul/}{\texttt{linkedin.com/in/ahmed-bassoul}} \quad GitHub : \href{https://github.com/AhmedBassoul1}{\texttt{github.com/AhmedBassoul1}} \\
+  Portfolio : \href{https://ahmedbassoul1.github.io/my-portfolio/}{\texttt{ahmedbassoul1.github.io/my-portfolio}} \quad Localisation : Tanger, Maroc
 }
 \rightheader{~}
 

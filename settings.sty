@@ -32,7 +32,7 @@
 \newcommand{\smallcaps}[1]{\textsc{\lowercase{#1}}}
 
 % Marges réduites pour tenir sur 1 page
-\RequirePackage[a4paper,nohead,nofoot,hmargin=1.6cm,vmargin=1.2cm]{geometry}
+\RequirePackage[a4paper,nohead,nofoot,hmargin=1.2cm,vmargin=1cm]{geometry}
 \RequirePackage{relsize}
 \RequirePackage[dvipsnames,svgnames]{xcolor}
 \RequirePackage{tikz}
@@ -74,10 +74,11 @@
 % Espacements compactés pour 1 page
 \headerscale{0.95}
 \rubricfont{\large\bfseries\sffamily}
-\setlength{\rubricspace}{-2pt}
-\setlength{\rubricafterspace}{-4pt}
-\setlength{\subrubricspace}{-2pt}
-\setlength{\subrubricbeforespace}{-2pt}
+\setlength{\rubricspace}{-3pt}
+\setlength{\rubricafterspace}{-6pt}
+\setlength{\subrubricspace}{-3pt}
+\setlength{\subrubricbeforespace}{-3pt}
+\linespread{1.0}
 \def\@@rubrichead#1{%
   \begin{tikzpicture}[baseline]%
   \shade[left color=SwishLineColour!60!white, right color=white] rectangle (\@almosttextwidth,2pt);

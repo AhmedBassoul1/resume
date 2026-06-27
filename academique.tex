@@ -1,12 +1,22 @@
 %!TEX encoding = UTF8
 %!TEX root = cv-llt.tex
 
-\begin{rubric}{Projets Académiques}
+\begin{rubric}{Projets personnels}
 
-\entry*[2024]
-    \textbf{Génération de légendes d'images (ViT + GPT-2)} — Architecture encodeur-décodeur sur dataset COCO, évaluation BLEU/CIDEr. \textit{Stack : PyTorch, Hugging Face.}
+% --- VERSION TECHNIQUE : pour les postes ML/Data Science ---
+\entry*[2024 -- Présent]
+    \textbf{SafeKids — Extension Chrome de sécurité enfant propulsée par IA}
+    \par Développé un système de modération de contenu en temps réel avec un LLM local \textnormal{(Llama 3.2 via Ollama)}, classant les messages en 10 catégories de risque avec score de confiance.
+    \par Implémenté la logique d'alerte, des jetons d'activation sécurisés et un tableau de bord de supervision avec résumés de session générés par LLM.
+    \par Conçu une solution full-stack (FastAPI, SQLite + Alembic, Chrome Extension MV3, SMTP, Pytest) avec inférence 100\% locale pour préserver la confidentialité.
 
-\entry*[2024]
-    \textbf{Extraction d'informations sur factures (LLM + OCR)} — Automatisation de l'extraction de données structurées (fournisseur, montant, date) via prompt engineering. \textit{Stack : Python, Tesseract OCR, LangChain.}
+% --- VERSION NON-TECHNIQUE : pour les postes RH/généralistes ---
+% Décommenter ci-dessous et commenter la version ci-dessus pour les entreprises non-tech
+%
+% \entry*[2024 -- 2025]
+%     \textbf{SafeKids — Outil de sécurité parentale pour les chats en ligne}
+%     \par Développé une extension de navigateur qui surveille les messages en ligne d'un enfant en temps réel et alerte instantanément les parents en cas de contenu dangereux (harcèlement, automutilation, demandes inappropriées).
+%     \par Traité toutes les données localement sur l'ordinateur de l'utilisateur pour garantir la confidentialité ; aucun message n'est envoyé à des entreprises externes.
+%     \par Conçu un tableau de bord parental pour consulter l'activité, générer des rapports et activer temporairement la surveillance via un lien sécurisé.
 
 \end{rubric}
