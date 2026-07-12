@@ -1,14 +1,13 @@
 # Fdb version 4
-["biber cv-llt"] 0 "cv-llt.bcf" "cv-llt.bbl" "cv-llt" 0 0
-  "cv-llt.bcf" 0 -1 0 "pdflatex"
-  "own-bib.bib" 0 -1 0 ""
+["biber cv-llt"] 1782981582.8833 "cv-llt.bcf" "cv-llt.bbl" "cv-llt" 1783852587.93836 0
+  "cv-llt.bcf" 1783852587.74852 108137 05fa997e685902cca29c1a266d96245b "pdflatex"
   (generated)
   "cv-llt.bbl"
   "cv-llt.blg"
   (rewritten before read)
-["pdflatex"] 1782554496.24426 "/home/ahmed/Docs/cv-llt.tex" "cv-llt.pdf" "cv-llt" 1782554499.25754 0
+["pdflatex"] 1783852585.20996 "/home/ahmed/Docs_fr/cv-llt.tex" "cv-llt.pdf" "cv-llt" 1783852587.939 0
   "/etc/texmf/web2c/texmf.cnf" 1778620247.732 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/ahmed/Docs/cv-llt.tex" 1782550550 1712 b89bfdbdb72dcf3dbcd7eaac873300b9 ""
+  "/home/ahmed/Docs_fr/cv-llt.tex" 1782554960.04697 1712 b89bfdbdb72dcf3dbcd7eaac873300b9 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cabin/cbn_i3ioen.enc" 1594851208 2809 947aec6f9801b5a045e999c93403fba2 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cochineal/coch_mzvjrl.enc" 1699995645 3339 01645df27401be56dadafffd238bede0 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cochineal/coch_qyvxxn.enc" 1699995645 3327 9b65464e10cac7aab6e1e25d12d2e0dc ""
@@ -224,18 +223,18 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1769369718 41603 27f93b3067076450172040dcd57ca8b3 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1778884411 5541477 3118940318599480888143717dd32d64 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1778884529 3639274 53145eda39d4e35fcaba0e0a22bf4e04 ""
-  "academique.tex" 1782550550 1647 5cc92b800d5c39b6b5846e533b7477c3 ""
-  "cv-llt.aux" 1782554498.86686 1112 dda929bb7dc01de457ee231f5446d463 "pdflatex"
-  "cv-llt.bbl" 0 -1 0 "biber cv-llt"
-  "cv-llt.out" 1782554498.29486 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "cv-llt.run.xml" 1782554498.88266 2412 dd0cf7b868f9399f322ce1d6c7e3eec5 "pdflatex"
-  "cv-llt.tex" 1782550550 1712 b89bfdbdb72dcf3dbcd7eaac873300b9 ""
-  "education.tex" 1782550550 613 b8583eaa046103ee7c165c4e62cc13df ""
-  "experience.tex" 1782550550 1711 3c821fe52e07701665c0ff9a2de3ed78 ""
-  "misc.tex" 1782550550 186 81b27d3b0200012ec551bd8113546db0 ""
-  "profil.tex" 1782550550 409 f3690f66558303fabd0c64bdf30b563d ""
-  "settings.sty" 1782553938.6905 4270 5a92390bb12c4875b9523141aee1ce71 ""
-  "skills.tex" 1782550550 938 af509b8f7bd4685c3b94fe56175150a6 ""
+  "academique.tex" 1782554960.04643 1647 5cc92b800d5c39b6b5846e533b7477c3 ""
+  "cv-llt.aux" 1783852587.73952 1135 5761eeee360cf0fa9df2db9410212969 "pdflatex"
+  "cv-llt.bbl" 1782981584.31439 466 76d65a242ec496c9b4361af646ff12cb "biber cv-llt"
+  "cv-llt.out" 1783852587.04063 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "cv-llt.run.xml" 1783852587.75167 2412 dd0cf7b868f9399f322ce1d6c7e3eec5 "pdflatex"
+  "cv-llt.tex" 1782554960.04697 1712 b89bfdbdb72dcf3dbcd7eaac873300b9 ""
+  "education.tex" 1782554960.0471 613 b8583eaa046103ee7c165c4e62cc13df ""
+  "experience.tex" 1782981582.45843 1723 42b218c98c109d961435ab3e053839d6 ""
+  "misc.tex" 1782554960.0471 186 81b27d3b0200012ec551bd8113546db0 ""
+  "profil.tex" 1782554960.0471 409 f3690f66558303fabd0c64bdf30b563d ""
+  "settings.sty" 1782554960.04753 4270 5a92390bb12c4875b9523141aee1ce71 ""
+  "skills.tex" 1782554960.04773 938 af509b8f7bd4685c3b94fe56175150a6 ""
   (generated)
   "cv-llt.aux"
   "cv-llt.bcf"
